@@ -7,7 +7,9 @@
     "less": "lessc less/main.less public/css/main.css",
     "release": "shadow-cljs release app",
     "browser-test": "shadow-cljs watch browser-test",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "shadow-cljs compile test && karma start --single-run",
+    "server": "shadow-cljs server",
+    "clean": "rm -rf target && rm -rf public/js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,19 @@
   },
   "homepage": "https://github.com/sm-moore/cljs-reframe#readme",
   "devDependencies": {
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cljs-test": "^0.1.0",
+    "react-flip-move": "^3.0.4",
+    "react-highlight.js": "^1.0.7",
     "shadow-cljs": "^2.8.86"
+  },
+  "dependencies": {
+    "@smooth-ui/core-sc": "^11.1.5",
+    "create-react-class": "^15.6.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.1",
+    "styled-icons": "^9.5.0"
   }
 }
